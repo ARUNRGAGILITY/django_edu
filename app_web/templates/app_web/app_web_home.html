@@ -1,0 +1,415 @@
+{% extends "./base_bootstrap.html" %}
+{% load static %}
+{% block content %}
+
+<main>
+    <div class="container-fluid">
+        {% include "./top_level_menu.html" %}
+     
+        <!-- Add Main Section CTA -->
+ 
+     <section class="py-5 text-center container">
+       <div class="row py-lg-5">
+         <div class="col-lg-6 col-md-8 mx-auto">
+           <h1 class="fw-light">Learn Python Django</h1>
+           <p class="lead text-body-secondary">
+             Become an Enterprise Software Developer <br>
+             for Agile organizations, by Learning <br>
+             Popular Languages <br>
+             like Python, Django, HTML, CSS, JS, SQL/ORM, MySQL <br>
+             Technologies &amp; Approaches 
+           </p>
+           <p>
+            <div class="btn-group">
+                <button type="button" class="btn btn-sm btn-primary" id="course_learn">Invest in your Learning</button>
+                <button type="button" class="btn btn-sm btn-secondary" id="course_details">Know more about the courses</button>
+            </div>
+           </p>
+         </div>
+       </div>
+     </section>
+   
+     <!-- Begin Details -->
+     <div class="album py-5 bg-body-tertiary">
+       <div class="container">
+         
+         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+           <!-- CARD -->
+           <div class="col">            
+             <div class="card shadow-sm">
+               <img src="{% static 'images/python1.png' %}" alt="">
+               <div class="card-body">
+                 <p class="card-text">
+                   Learn Python Basics and Explore with Python Foundations Course
+                 </p>
+                 <div class="d-flex justify-content-between align-items-center">
+                   <div class="btn-group">
+                     <button type="button" class="btn btn-sm btn-outline-secondary" id="python_learn">Learn</button>
+                     <button type="button" class="btn btn-sm btn-outline-secondary" id="python_details">Details</button>
+                   </div>
+                   <small class="text-body-secondary">14 days</small>
+                 </div>
+               </div>
+             </div>
+           </div>
+           <!-- END CARD -->
+           
+            <!-- CARD -->
+            <div class="col">            
+             <div class="card shadow-sm">
+               <img src="{% static 'images/django1.png' %}" alt="">
+               <div class="card-body">
+                 <p class="card-text">
+                   Learn Django Basics and Explore with Django Foundations Course
+                 </p>
+                 <div class="d-flex justify-content-between align-items-center">
+                   <div class="btn-group">
+                     <button type="button" class="btn btn-sm btn-outline-secondary" id="django_learn">Learn</button>
+                     <button type="button" class="btn btn-sm btn-outline-secondary" id="django_details">Details</button>
+                   </div>
+                   <small class="text-body-secondary">14 days</small>
+                 </div>
+               </div>
+             </div>
+           </div>
+           <!-- END CARD -->
+           <!-- CARD -->
+           <div class="col">            
+             <div class="card shadow-sm">
+               <img src="{% static 'images/mysql1.png' %}" alt="">
+               <div class="card-body">
+                 <p class="card-text">
+                   Learn MYSQL Basics and Explore with MYSQL Foundations Course
+                 </p>
+                 <div class="d-flex justify-content-between align-items-center">
+                   <div class="btn-group">
+                     <button type="button" class="btn btn-sm btn-outline-secondary" id="mysql_learn">Learn</button>
+                     <button type="button" class="btn btn-sm btn-outline-secondary" id="mysql_details">Details</button>
+                   </div>
+                   <small class="text-body-secondary">2 days</small>
+                 </div>
+               </div>
+             </div>
+           </div>
+           <!-- END CARD -->
+ 
+            <!-- CARD -->
+            <div class="col">            
+             <div class="card shadow-sm">
+               <img src="{% static 'images/html1.png' %}" alt="">
+               <div class="card-body">
+                 <p class="card-text">
+                   Learn HTML Basics and Explore with HTML Foundations Course
+                 </p>
+                 <div class="d-flex justify-content-between align-items-center">
+                   <div class="btn-group">
+                     <button type="button" class="btn btn-sm btn-outline-secondary" id="html_learn">Learn</button>
+                     <button type="button" class="btn btn-sm btn-outline-secondary" id="html_details">Details</button>
+                   </div>
+                   <small class="text-body-secondary">4 days</small>
+                 </div>
+               </div>
+             </div>
+           </div>
+           <!-- END CARD -->
+ 
+            <!-- CARD -->
+            <div class="col">            
+             <div class="card shadow-sm">
+               <img src="{% static 'images/css1.png' %}" alt="">
+               <div class="card-body">
+                 <p class="card-text">
+                   Learn CSS Basics and Explore with CSS Foundations Course
+                 </p>
+                 <div class="d-flex justify-content-between align-items-center">
+                   <div class="btn-group">
+                     <button type="button" class="btn btn-sm btn-outline-secondary" id="css_learn">Learn</button>
+                     <button type="button" class="btn btn-sm btn-outline-secondary" id="css_details">Details</button>
+                   </div>
+                   <small class="text-body-secondary">4 days</small>
+                 </div>
+               </div>
+             </div>
+           </div>
+           <!-- END CARD -->
+ 
+            <!-- CARD -->
+            <div class="col">            
+             <div class="card shadow-sm">
+               <img src="{% static 'images/js1.png' %}" alt="">
+               <div class="card-body">
+                 <p class="card-text">
+                   Learn Javascript Basics and Explore with Javascript Foundations Course
+                 </p>
+                 <div class="d-flex justify-content-between align-items-center">
+                   <div class="btn-group">
+                     <button type="button" class="btn btn-sm btn-outline-secondary" id="js_learn">Learn</button>
+                     <button type="button" class="btn btn-sm btn-outline-secondary" id="js_details">Details</button>
+                   </div>
+                   <small class="text-body-secondary">10 days</small>
+                 </div>
+               </div>
+             </div>
+           </div>
+           <!-- END CARD -->
+            <!-- CARD -->
+            <div class="col">            
+             <div class="card shadow-sm">
+               <img src="{% static 'images/ORM1.png' %}" alt="">
+               <div class="card-body">
+                 <p class="card-text">
+                   Learn Object Relational Mapping and Explore with ORM Foundations Course
+                 </p>
+                 <div class="d-flex justify-content-between align-items-center">
+                   <div class="btn-group">
+                     <button type="button" class="btn btn-sm btn-outline-secondary" id="orm_learn">Learn</button>
+                     <button type="button" class="btn btn-sm btn-outline-secondary" id="orm_details">Details</button>
+                   </div>
+                   <small class="text-body-secondary">5 days</small>
+                 </div>
+               </div>
+             </div>
+           </div>
+           <!-- END CARD -->
+             <!-- CARD -->
+             <div class="col">            
+               <div class="card shadow-sm">
+                 <img src="{% static 'images/Python_Fullstack1.png' %}" alt="">
+                 <div class="card-body">
+                   <p class="card-text">
+                     Learn Full Stack Web Development and Explore with Full Stack Foundations Course
+                   </p>
+                   <div class="d-flex justify-content-between align-items-center">
+                     <div class="btn-group">
+                       <button type="button" class="btn btn-sm btn-outline-secondary" id="fullstack_learn">Learn</button>
+                       <button type="button" class="btn btn-sm btn-outline-secondary" id="fullstack_details">Details</button>
+                     </div>
+                     <small class="text-body-secondary">30 days</small>
+                   </div>
+                 </div>
+               </div>
+             </div>
+             <!-- END CARD -->
+ 
+             <!-- CARD -->
+             <div class="col">            
+               <div class="card shadow-sm">
+                 <img src="{% static 'images/tfd1.png' %}" alt="">
+                 <div class="card-body">
+                   <p class="card-text">
+                     Learn Test First Development and Explore with Python-TFD Foundations Course
+                   </p>
+                   <div class="d-flex justify-content-between align-items-center">
+                     <div class="btn-group">
+                       <button type="button" class="btn btn-sm btn-outline-secondary" id="tfd_learn">Learn</button>
+                       <button type="button" class="btn btn-sm btn-outline-secondary" id="tfd_details">Details</button>
+                     </div>
+                     <small class="text-body-secondary">15 days</small>
+                   </div>
+                 </div>
+               </div>
+             </div>
+            <!-- END CARD -->
+            <!-- CARD -->
+              <div class="col">            
+                <div class="card shadow-sm">
+                  <img src="{% static 'images/do1.png' %}" alt="">
+                  <div class="card-body">
+                    <p class="card-text">
+                      Learn DevOps and Explore with DevOps Foundations Course
+                    </p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-outline-secondary" id="do_learn">Learn</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary" id="do_details">Details</button>
+                      </div>
+                      <small class="text-body-secondary">30 days</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <!-- END CARD -->
+             <!-- CARD -->
+             <div class="col">            
+                <div class="card shadow-sm">
+                  <img src="{% static 'images/agile1.png' %}" alt="">
+                  <div class="card-body">
+                    <p class="card-text">
+                      Learn Agile and Explore with Agile Foundations Course
+                    </p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-outline-secondary" id="agile_learn">Learn</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary" id="agile_details">Details</button>
+                      </div>
+                      <small class="text-body-secondary">30 days</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <!-- END CARD -->
+            <!-- CARD -->
+             <div class="col">            
+                <div class="card shadow-sm">
+                  <img src="{% static 'images/scrum1.png' %}" alt="">
+                  <div class="card-body">
+                    <p class="card-text">
+                      Learn Scrum and Explore with Scrum Foundations Course
+                    </p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-outline-secondary" id="scrum_learn">Learn</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary" id="scrum_details">Details</button>
+                      </div>
+                      <small class="text-body-secondary">15 days</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <!-- END CARD -->
+            <!-- CARD -->
+            <div class="col">            
+                <div class="card shadow-sm">
+                  <img src="{% static 'images/kanban1.png' %}" alt="">
+                  <div class="card-body">
+                    <p class="card-text">
+                      Learn Kanban and Explore with Kanban Foundations Course
+                    </p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-outline-secondary" id="kanban_learn">Learn</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary" id="kanban_details">Details</button>
+                      </div>
+                      <small class="text-body-secondary">15 days</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <!-- END CARD -->
+            <!-- CARD -->
+            <div class="col">            
+                <div class="card shadow-sm">
+                  <img src="{% static 'images/agiletransformation1.png' %}" alt="">
+                  <div class="card-body">
+                    <p class="card-text">
+                      Learn Agile Transformation and Explore with Transformation Foundations Course
+                    </p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-outline-secondary" id="at_learn">Learn</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary" id="at_details">Details</button>
+                      </div>
+                      <small class="text-body-secondary">15 days</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <!-- END CARD -->
+             <!-- CARD -->
+             <div class="col">            
+                <div class="card shadow-sm">
+                  <img src="{% static 'images/asd1.png' %}" alt="">
+                  <div class="card-body">
+                    <p class="card-text">
+                      Learn Agile Software Development and Explore with Agile Software Development Foundations Course
+                    </p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-outline-secondary" id="asd_learn">Learn</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary" id="asd_details">Details</button>
+                      </div>
+                      <small class="text-body-secondary">45 days</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <!-- END CARD -->
+
+            <!-- CARD -->
+            <div class="col">            
+                <div class="card shadow-sm">
+                  <img src="{% static 'images/ai1.png' %}" alt="">
+                  <div class="card-body">
+                    <p class="card-text">
+                      Learn AI and Explore with AI Foundations Course
+                    </p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-outline-secondary" id="asd_learn">Learn</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary" id="asd_details">Details</button>
+                      </div>
+                      <small class="text-body-secondary">90 days</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <!-- END CARD -->
+
+            <!-- CARD -->
+            <div class="col">            
+                <div class="card shadow-sm">
+                  <img src="{% static 'images/aiwork1.png' %}" alt="">
+                  <div class="card-body">
+                    <p class="card-text">
+                      Learn ML/NN/DS and Explore with AI-Work Foundations Course
+                    </p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-outline-secondary" id="asd_learn">Learn</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary" id="asd_details">Details</button>
+                      </div>
+                      <small class="text-body-secondary">90 days</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <!-- END CARD -->
+
+            <!-- CARD -->
+            <div class="col">            
+                <div class="card shadow-sm">
+                  <img src="{% static 'images/gai1.png' %}" alt="">
+                  <div class="card-body">
+                    <p class="card-text">
+                      Learn Generative AI and Explore with Generative AI Foundations Course
+                    </p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-outline-secondary" id="asd_learn">Learn</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary" id="asd_details">Details</button>
+                      </div>
+                      <small class="text-body-secondary">90 days</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <!-- END CARD -->
+         </div>
+       </div>
+       <!-- End Details -->
+ 
+    </div>
+    </main>
+    
+    <!--
+
+        =============================================================
+        JAVASCRIPT 
+        =============================================================
+
+    -->
+
+    <!-- JavaScript to handle button click -->
+    <script>
+        const buttons = document.querySelectorAll('.btn');
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                const id = button.id;
+                const currentURL = window.location.href;
+                const finalURL = currentURL + id;
+                window.location.href = finalURL;
+            });
+        });
+    </script>
+
+{% endblock content %}

@@ -1,0 +1,21 @@
+from django import template
+from markdownx.utils import markdownify
+from django.template import Context, Template
+
+register = template.Library()
+
+@register.filter
+
+def preprocess(text, context):
+    # Use Django's template rendering engine to expand variables in the text
+    template = Template(text)
+    expanded_text = template.render(context)
+    return expanded_text
+
+@register.simple_tag(takes_context=True)
+def custom_markdown(context, text):
+    # Preprocess the content by expanding variables
+    preprocessed_text = preprocess(text, context)
+    
+    # Apply markdownify to the preprocessed content
+    return markdownify(preprocessed_text)

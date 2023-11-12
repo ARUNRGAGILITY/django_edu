@@ -7,9 +7,31 @@
         {% block title%}
         {% endblock title%}
     </title>
+    <style>
+      .no_decoration {
+          text-decoration: none;            
+      }
+      .space_link {
+          padding: 0 0.5rem 0 0.5rem;
+      }
+  </style>
   </head>
   <body>
     {% block content %}
-    {% endblock content %}
+    {% endblock content %}  
+    <!-- footer -->
+    <footer style="text-align: center; height: 22px;" class="footer mt-auto">
+      <font size="-1"> 
+          &copy; <span id="currentYear"></span>. Privacy Policy: No Privacy Information is utilized.
+      </font>
+  </footer>
+
+  <script>
+    // FOR FOOTER
+    // Get the current year
+    const currentYear = new Date().getFullYear();
+    // Update the content of the 'currentYear' span element
+    document.getElementById('currentYear').textContent = currentYear;
+  </script>
   </body>
 </html>
