@@ -34,7 +34,8 @@ def test_markdown(request):
 
 def display_md_topic(request, topic):
     # File path to the Markdown file in the template directory
-    markdown_file_path = f"./templates/app_tutorials/md_content/{topic}.md"
+    prod_path = "/home/DEVAGILEAGILITY/com_learnpythondjango/lpdcom/django_edu/app_tutorials"
+    markdown_file_path = f"{prod_path}/templates/app_tutorials/md_content/{topic}.md"
     # Print the file path for debugging
     print(">>> === Markdown file path: {markdown_file_path} === <<<" )
     # Read the content of the Markdown file
