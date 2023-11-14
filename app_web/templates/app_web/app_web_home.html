@@ -406,7 +406,7 @@
             button.addEventListener('click', () => {
                 const id = button.id;
                 const currentURL = window.location.href;
-                const finalURL = currentURL + id;
+                const finalURL = currentURL + "display_topic/" +id;
                 window.location.href = finalURL;
             });
         });

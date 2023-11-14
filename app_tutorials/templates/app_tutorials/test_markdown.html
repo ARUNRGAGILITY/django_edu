@@ -1,0 +1,15 @@
+{% extends "../app_web/base_bootstrap.html" %}
+{% load static %}
+{% load markdown_extras  %}
+{% block title %}TestMarkdown Home{% endblock title %}
+{% block content %}
+{% include "./_style_markdown_content.css" %}
+<div class="container-fluid">
+    {% include "../app_web/top_level_menu.html" %}
+    <h1>TestMarkdown Home</h1>
+    <h2>{{page}}</h2>
+    <div class="markdown-content">
+        {{html_content|markdown|safe}}
+    </div>    
+</div>
+{% endblock content %}
