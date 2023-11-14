@@ -2,6 +2,8 @@ from django.shortcuts import render
 from collections import Counter
 import configparser
 import json
+import platform 
+
 app_name = "app_quiz"
 
 ### Utility function
@@ -38,7 +40,10 @@ def show_quiz(request, topic):
     #
     # Define the path to the INI file based on the requested topic
     #f"app_tutorials/templates/app_tutorials/md_content/{topic}.md"
-    ini_file_path = f"app_quiz/templates/app_quiz/quiz_content/{topic}.ini"
+    os_info = platform.system()
+    print(f">>> === OS INFO: {os_info} === <<<")
+    prod_path = f"/home/DEVAGILEAGILITY/com_learnpythondjango/lpdcom/django_edu"
+    ini_file_path = f"{prod_path}/{app_name}/templates/{app_name}/quiz_content/{topic}.ini"
 
     # Read the INI file and parse it
     config = configparser.ConfigParser()
