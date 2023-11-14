@@ -42,8 +42,11 @@ def show_quiz(request, topic):
     #f"app_tutorials/templates/app_tutorials/md_content/{topic}.md"
     os_info = platform.system()
     print(f">>> === OS INFO: {os_info} === <<<")
-    prod_path = f"/home/DEVAGILEAGILITY/com_learnpythondjango/lpdcom/django_edu"
-    ini_file_path = f"{prod_path}/{app_name}/templates/{app_name}/quiz_content/{topic}.ini"
+    prod_path = ""
+    if os_info.find("Linux") != -1:
+        prod_path = f"/home/DEVAGILEAGILITY/com_learnpythondjango/lpdcom/django_edu/"
+    
+    ini_file_path = f"{prod_path}{app_name}/templates/{app_name}/quiz_content/{topic}.ini"
 
     # Read the INI file and parse it
     config = configparser.ConfigParser()

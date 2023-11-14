@@ -1,7 +1,7 @@
 from django.shortcuts import render
 
 import os
-
+import platform
 
 app_name = "app_tutorials"
 def tutorials_home_page(request):
@@ -33,9 +33,13 @@ def test_markdown(request):
 
 
 def display_md_topic(request, topic):
+    os_info = platform.system()
+    print(f">>> === OS INFO: {os_info} === <<<")
+    prod_path = ""
+    if os_info.find("Linux") != -1:
+        prod_path = f"/home/DEVAGILEAGILITY/com_learnpythondjango/lpdcom/django_edu/"
     # File path to the Markdown file in the template directory
-    prod_path = f"/home/DEVAGILEAGILITY/com_learnpythondjango/lpdcom/django_edu/{app_name}"
-    markdown_file_path = f"{prod_path}/templates/{app_name}/md_content/{topic}.md"
+    markdown_file_path = f"{prod_path}{app_name}/templates/{app_name}/md_content/{topic}.md"
     # Print the file path for debugging
     print(">>> === Markdown file path: {markdown_file_path} === <<<" )
     # Read the content of the Markdown file
