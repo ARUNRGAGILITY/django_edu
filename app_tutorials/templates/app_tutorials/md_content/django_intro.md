@@ -30,9 +30,63 @@ Django is a popular choice for web development because it promotes rapid develop
 <img src="/static/images/django/django_webflow.png" alt="">
 
 #### Django Installation Steps 
+Below is a tabular format outlining the general steps for installing Django, followed by separate sections with installation steps for different operating systems: Windows, macOS, and Linux.
+
+**General Django Installation Steps (All Operating Systems):**
+
+| Step | Description                                                |
+| ---- | ---------------------------------------------------------- |
+| 1    | Install Python if not already installed (Python 3.6 or higher is recommended). You can download Python from the official website: [python.org](https://www.python.org/downloads/). |
+| 2    | Open a terminal or command prompt.                        |
+| 3    | Install Django using pip, Python's package manager, by running the following command: `pip install django`. |
+| 4    | Verify the installation by running `django-admin --version` or `python -m django --version` to check the Django version. |
+| 5    | Django is now installed and ready for use. You can create Django projects and applications.
+
+Now, let's provide installation steps for each operating system:
 
 ##### Django Installation Steps (Windows)
+**Windows:**
 
+| Step | Description                                                |
+| ---- | ---------------------------------------------------------- |
+| 1    | Install Python for Windows from the official website: [python.org](https://www.python.org/downloads/windows/). Make sure to add Python to your system's PATH during installation. |
+| 2    | Open a Command Prompt or PowerShell window.                |
+| 3    | Install Django using pip by running the command: `pip install django`. |
+| 4    | Verify the installation by running `django-admin --version` or `python -m django --version`. |
+| 5    | Django is now installed on your Windows system.
 ##### Django Installation Steps (Mac)
+**macOS:**
 
-##### Django Installation Steps (Linux/Unix)
+| Step | Description                                                |
+| ---- | ---------------------------------------------------------- |
+| 1    | macOS usually comes with Python pre-installed. You can check if Python is installed by opening the Terminal and running `python --version`. |
+| 2    | If Python is not installed, download and install Python from the official website: [python.org](https://www.python.org/downloads/mac-osx/). |
+| 3    | Open the Terminal.                                         |
+| 4    | Install Django using pip by running the command: `pip install django`. |
+| 5    | Verify the installation by running `django-admin --version` or `python -m django --version`. |
+| 6    | Django is now installed on your macOS system.
+##### Django Installation Steps (Linux)
+
+**Linux (Ubuntu/Debian):**
+
+| Step | Description                                                |
+| ---- | ---------------------------------------------------------- |
+| 1    | Open the Terminal.                                         |
+| 2    | Update the package list: `sudo apt-get update`.           |
+| 3    | Install Python 3 and pip: `sudo apt-get install python3 python3-pip`. |
+| 4    | Install Django using pip: `sudo pip3 install django`.    |
+| 5    | Verify the installation by running `django-admin --version` or `python3 -m django --version`. |
+| 6    | Django is now installed on your Ubuntu/Debian Linux system.
+
+**Linux (CentOS/RHEL):**
+
+| Step | Description                                                |
+| ---- | ---------------------------------------------------------- |
+| 1    | Open the Terminal.                                         |
+| 2    | Update the package list: `sudo yum update`.               |
+| 3    | Install Python 3 and pip: `sudo yum install python3 python3-pip`. |
+| 4    | Install Django using pip: `sudo pip3 install django`.    |
+| 5    | Verify the installation by running `django-admin --version` or `python3 -m django --version`. |
+| 6    | Django is now installed on your CentOS/RHEL Linux system.
+
+These steps should guide you through installing Django on your preferred operating system. Please note that package management commands may vary slightly depending on the Linux distribution you are using.
