@@ -1,5 +1,6 @@
 from django.shortcuts import render
 import os
+import platform
 # Create your views here.
 app_name = "app_web"
 
@@ -38,8 +39,13 @@ def contact_us_page(request):
     return render(request, template_file, context)
 
 def display_web_topic(request, topic):
+    os_info = platform.system()
+    print(f">>> === OS INFO: {os_info} === <<<")
+    prod_path = ""
+    if os_info.find("Linux") != -1:
+        prod_path = f"/home/DEVAGILEAGILITY/com_learnpythondjango/lpdcom/django_edu/"
     # File path to the Markdown file in the template directory
-    markdown_file_path = f"{app_name}/templates/{app_name}/md_content/{topic}.md"
+    markdown_file_path = f"{prod_path}{app_name}/templates/{app_name}/md_content/{topic}.md"
     
     # Check if the Markdown file exists
     if not os.path.exists(markdown_file_path):
