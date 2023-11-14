@@ -1,3 +1,6 @@
+<a href="/">Home</a>&nbsp;&nbsp;/&nbsp;&nbsp;<a href="/tutorials/tutorials_home_page">Tutorials Home</a>
+<b>Python Introduction</b>
+<br>
 # Python Introduction
 <a id="table-of-contents"></a>
 - [Python Introduction](#python-introduction)
