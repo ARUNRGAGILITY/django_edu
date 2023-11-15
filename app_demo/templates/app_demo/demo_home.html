@@ -1,10 +1,10 @@
 {% extends "../app_web/base_bootstrap.html" %}
 {% load static %}
-{% block title %}Tutorials Home{% endblock title %}
+{% block title %}Demo Home{% endblock title %}
 {% block content %}
 {% include "../app_web/top_level_menu.html" %}
 <div class="container-fluid">    
-    <h1>Tutorials Home</h1>
+    <h1>Demo Home</h1>
     <div class="row">
         <div class="col-md-3"></div>
         <div class="col-md-6">
@@ -12,7 +12,7 @@
                 <thead>
                     <tr>
                         <th>#</th>
-                        <th>Tutorials</th>
+                        <th>Demo</th>
                         <th>Description</th>
                     </tr>
                 </thead>
@@ -20,23 +20,21 @@
                     <tr>
                         <td>1</td>
                         <td>
-                            <a href="{% url 'display_md_topic' 'python_intro' %}">Python</a>
+                            <a href="{% url 'display_demo_topic' 'todolist' %}">Todo List</a>
                         </td>
-                        <td>Introduction to Python Programming Language</td>
+                        <td>Introduction to a simple Todo List</td>
                     </tr>
                     <tr>
                         <td>2</td>
                         <td>
-                            <a href="{% url 'display_md_topic' 'django_intro' %}">Django</a>
+                            <a href="{% url 'display_demo_topic' 'personal_kanban' %}">Personal</a>
                         </td>
-                        <td>Introduction Django Web Framework for Web and REST API</td>
+                        <td>Introduction to Kanban at Personal/Individual Kanban</td>
                     </tr>
                 </tbody>
             </table>
         </div>
         <div class="col-md-3"></div>
     </div>
-   
-    <!-- <a href="{% url 'test_markdown' %}">Test Markdown</a> -->
 </div>
 {% endblock content %}

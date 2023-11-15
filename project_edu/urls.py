@@ -18,6 +18,8 @@ urlpatterns = [
     path('tutorials/', include('app_tutorials.urls')),
     # Quiz
     path('quiz/', include('app_quiz.urls')),
+    # Demo
+    path('demo/', include('app_demo.urls')),
     
     
     # markdown

@@ -1,0 +1,21 @@
+{% extends "../app_web/base_bootstrap.html" %}
+{% load static %}
+{% load custom_filters %}
+{% load markdown_extras  %}
+{% block title %}{{topic}} Demo{% endblock title %}
+{% block content %}
+{% include "../app_tutorials/_style_markdown_content.css" %}
+{% include "../app_web/top_level_menu.html" %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <div class="markdown-content">
+                {{html_content|markdown|safe}}
+            </div>   
+        </div>
+        <div class="col-md-2"></div>
+    </div>       
+</div>
+{% include "../app_tutorials/_js_markdown_content.js" %}
+{% endblock content %}

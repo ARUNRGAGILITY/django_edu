@@ -1,3 +1,6 @@
+<a href="/">Home</a>&nbsp;&nbsp;/&nbsp;&nbsp;
+<b>Home</b>
+<br>
 ## Want to learn Python, Django and other related topics quickly and effectively!
 
 ### Here is our email address: 
