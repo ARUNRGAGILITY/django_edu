@@ -1,0 +1,62 @@
+<div class="row">
+    <div class="col-md-6 d-flex justify-content-start align-items-center">
+        <b>LearnPythonDjango.com</b>
+    </div>
+    <div class="col-md-6 d-flex justify-content-end align-items-center my-1">
+        {% if page == 'home' %}
+        <b>Home</b>
+        &nbsp;&nbsp;
+        {% else %}
+        <a href="/" class="no_decoration space_link">Home</a>
+        {% endif %} 
+
+        {% if page == 'tutorials' %}
+        <b class="no_decoration space_link">Tutorials</b>
+        {% else %}
+        <a href="{% url 'tutorials_home_page' %}" class="no_decoration space_link">Tutorials</a>
+        {% endif %}
+
+        {% if page == 'courses' %}
+        <b class="no_decoration space_link">Courses</b>
+        {% else %}
+        <a href="{% url 'courses_home_page' %}" class="no_decoration space_link">Courses</a>
+        {% endif %}
+
+        {% if page == 'quiz' %}
+        <b class="no_decoration space_link">Quiz</b>
+        {% else %}
+        <a href="{% url 'quiz_home_page' %}" class="no_decoration space_link">Quiz</a>
+        {% endif %}
+
+        {% if page == 'blog' %}
+        <b class="no_decoration space_link">Blog</b>
+        {% else %}
+        <a href="{% url 'blog_home_page' %}" class="no_decoration space_link">Blog</a>
+        {% endif %}
+
+        {% if page == 'about' %}
+        <b class="no_decoration space_link">About</b>
+        {% else %}
+        <a href="{% url 'about_page' %}" class="no_decoration space_link">About</a>
+        {% endif %}
+
+        {% if page == 'contact' %}
+        <b class="no_decoration space_link">Contact Us</b>
+        {% else %}
+        <a href="{% url 'contact_us_page' %}" class="no_decoration space_link">Contact Us</a>
+        {% endif %}
+
+        &nbsp;&nbsp;
+        {% if page == 'login' %}
+        <b>Login</b>
+        {% else %}
+        <a href="{% url 'login' %}" class="btn btn-sm btn-primary">Login</a>
+        {% endif %}
+        &nbsp;&nbsp;
+        {% if page == 'register' %}
+        <b>Register</b>
+        {% else %}
+        <a href="{% url 'register' %}" class="btn btn-sm btn-secondary">Register</a>
+        {% endif %}
+    </div>
+</div>

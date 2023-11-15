@@ -1,6 +1,14 @@
 <a href="/">Home</a>&nbsp;&nbsp;/&nbsp;&nbsp;<a href="/tutorials/tutorials_home_page">Tutorials Home</a>
 <b>Django Introduction</b>
 <br>
+- [Django Introduction](#django-introduction)
+      - [Django Installation Steps](#django-installation-steps)
+        - [Django Installation Steps (Windows)](#django-installation-steps-windows)
+        - [Django Installation Steps (Mac)](#django-installation-steps-mac)
+        - [Django Installation Steps (Linux)](#django-installation-steps-linux)
+      - [Django: Running the server first time](#django-running-the-server-first-time)
+
+
 # Django Introduction
 
 Django is a high-level web framework for building web applications using Python. It follows the Model-View-Controller (MVC) architectural pattern, but in Django, it's often referred to as Model-View-Template (MVT). Here's a brief introduction to some key concepts and features of Django:
@@ -54,6 +62,7 @@ Now, let's provide installation steps for each operating system:
 | 3    | Install Django using pip by running the command: `pip install django`. |
 | 4    | Verify the installation by running `django-admin --version` or `python -m django --version`. |
 | 5    | Django is now installed on your Windows system.
+
 ##### Django Installation Steps (Mac)
 **macOS:**
 
@@ -65,6 +74,7 @@ Now, let's provide installation steps for each operating system:
 | 4    | Install Django using pip by running the command: `pip install django`. |
 | 5    | Verify the installation by running `django-admin --version` or `python -m django --version`. |
 | 6    | Django is now installed on your macOS system.
+
 ##### Django Installation Steps (Linux)
 
 **Linux (Ubuntu/Debian):**
@@ -90,3 +100,31 @@ Now, let's provide installation steps for each operating system:
 | 6    | Django is now installed on your CentOS/RHEL Linux system.
 
 These steps should guide you through installing Django on your preferred operating system. Please note that package management commands may vary slightly depending on the Linux distribution you are using.
+
+#### Django: Running the server first time
+
+Here are the steps to run a Django project for the first time, presented in a tabular format:
+
+**Running a Django Project for the First Time:**
+
+Certainly! Here are the steps to create a new Django project and run it for the first time, presented in a tabular format:
+
+**Creating and Running a Django Project for the First Time:**
+
+| Step | Description                                                |
+| ---- | ---------------------------------------------------------- |
+| 1    | Open a terminal or command prompt.                        |
+| 2    | Navigate to the directory where you want to create your Django project. |
+| 3    | Create a new Django project by running the command: `django-admin startproject projectname`. Replace `projectname` with the name of your project. This will create a new project directory with the necessary files and structure. |
+| 4    | Change into the newly created project directory: `cd projectname`. |
+| 5    | Inside the project directory, create a Django app by running: `python manage.py startapp appname`. Replace `appname` with the name of your app. This will create a new app directory with the necessary files and structure. |
+| 6    | Define your models, views, and templates in your app as needed for your project. |
+| 7    | Run database migrations to create the database schema: `python manage.py makemigrations` and then `python manage.py migrate`. |
+| 8    | Create a superuser account to access the Django admin panel: `python manage.py createsuperuser`. Follow the prompts to create an admin account. |
+| 9    | Run the development server by executing the command: `python manage.py runserver`. This starts the Django development server, allowing you to run your project locally. |
+| 10   | Once the server is running, you should see output indicating that the server is listening on a specific IP address and port (usually `127.0.0.1:8000`). You can access your Django project by opening a web browser and entering this address. |
+| 11   | By default, the development server provides access to the Django admin interface at `/admin/`. To access it, open your browser and go to `http://127.0.0.1:8000/admin/`. Log in using the admin credentials you created earlier. |
+| 12   | To view your project's homepage, go to `http://127.0.0.1:8000/` in your browser. This is where you can start building your application. |
+| 13   | Congratulations! You've successfully created and run your Django project for the first time. You can now start developing your web application.
+
+These steps will guide you through creating a new Django project, setting up an app, and running the project locally. You can then proceed to develop your web application within this project structure.
