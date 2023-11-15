@@ -1153,10 +1153,3 @@ You can click on the URLs to access these Python learning resources.
 
 [Go Back to Table of Contents](#table-of-contents)
 
-
-[Go Back to Table of Contents](#table-of-contents)
-
-[Go Back to Table of Contents](#table-of-contents)
-
-
-[Go Back to Table of Contents](#table-of-contents)
