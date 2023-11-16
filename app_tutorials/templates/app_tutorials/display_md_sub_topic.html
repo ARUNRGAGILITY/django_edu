@@ -1,4 +1,4 @@
-{% extends "../app_web/base_bootstrap.html" %}
+{% extends "../app_web/sub_topic_bootstrap.html" %}
 {% load static %}
 {% load custom_filters %}
 {% load markdown_extras  %}
@@ -6,8 +6,6 @@
 {% block content %}
 {% include "./_style_markdown_content.css" %}
 <div class="container-fluid">
-<!-- display the top level menu only for topics, and not for sub_topics which are loaded on pane -->
-{% if sub_topic == False %}{% include "../app_web/top_level_menu.html" %}{% endif %}
     <div class="row">
         <div class="col-md-2"></div>
         <div class="col-md-8">
