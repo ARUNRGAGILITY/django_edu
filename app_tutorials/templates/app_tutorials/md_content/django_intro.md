@@ -107,7 +107,7 @@ Here are the steps to run a Django project for the first time, presented in a ta
 
 **Running a Django Project for the First Time:**
 
-Certainly! Here are the steps to create a new Django project and run it for the first time, presented in a tabular format:
+Here are the steps to create a new Django project and run it for the first time, presented in a tabular format:
 
 **Creating and Running a Django Project for the First Time:**
 
