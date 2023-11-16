@@ -31,9 +31,34 @@
                         </td>
                         <td>Introduction to Python Programming Language</td>
                     </tr>
+
+                     <!-- Python Programming -->
+                     <tr>
+                        <td rowspan="3"></td>
+                        <td rowspan="3">
+                            <a href="{% url 'display_md_topic' 'python_intro' %}">Python</a>
+                        </td>
+                        <td>
+                            Python Introduction and more topics
+                        </td>
+                      </tr>
+                     
+                      <tr>
+                        <td>
+                            <a href="{% url 'display_md_topic' 'python_strings' %}">Python Strings</a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                            <a href="{% url 'display_md_topic' 'python_functions' %}">Python Functions</a>
+                        </td>
+                      </tr>
+
+
+                    <!-- DJANGO WEB FRAMEWORK -->
                     <tr>
-                        <td rowspan="10"></td>
-                        <td rowspan="10">
+                        <td rowspan="4"></td>
+                        <td rowspan="4">
                             <a href="{% url 'display_md_topic' 'django_intro' %}">Django Introduction</a>
                         </td>
                         <td>
@@ -55,14 +80,25 @@
                             <a href="{% url 'display_md_topic' 'django_website_sample' %}">Django: Create a website</a>
                         </td>
                       </tr>
+                     
+                    
+                      <!-- Django REST API -->
                       <tr>
-                        <td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2">
                             <a href="{% url 'display_md_topic' 'django_rest_api' %}">Django: REST API Introduction</a>
                         </td>
+                        <td>
+                            Introduction Django REST API Framework - DRF
+                        </td>
                       </tr>
-                    
-                    
-                   
+                     
+                      <tr>
+                        <td>
+                            <a href="{% url 'display_md_topic' 'django_rest_api_crud' %}"> Django REST API Framework CRUD Example</a>
+                        </td>
+                      </tr>
+                     
                 </tbody>
             </table>
         </div>
