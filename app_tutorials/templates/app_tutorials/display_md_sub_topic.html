@@ -5,16 +5,8 @@
 {% block title %}{{topic}} Tutorials{% endblock title %}
 {% block content %}
 {% include "./_style_markdown_content.css" %}
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-md-2"></div>
-        <div class="col-md-8">
-            <div class="markdown-content">
-                {{html_content|markdown|safe}}
-            </div>   
-        </div>
-        <div class="col-md-2"></div>
-    </div>       
-</div>
+<div class="markdown-content">
+    {{html_content|markdown|safe}}
+</div>  
 {% include "./_js_markdown_content.js" %}
 {% endblock content %}
