@@ -26,10 +26,11 @@ def check_two_list(got_list, ref_list):
     return match_result
 
 def quiz_home_page(request):
-    #
+    # take inputs
      
+    # process inputs
     
-    #
+    # send outputs / information
     context = {
         'page': "quiz",
     }
@@ -75,7 +76,7 @@ def show_quiz(request, topic):
         }        
         questions.append(question)
     
-    
+    # User submits the quiz: processing starts
     if request.method == "POST":
         submitted_answers = {}
         answers = {}
