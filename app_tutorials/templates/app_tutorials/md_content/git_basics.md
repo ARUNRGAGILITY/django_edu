@@ -34,6 +34,8 @@ Here's an expanded table of Git commands, including local Git commands for initi
 | View changes                        | `git status`                             | Lists all new or modified files to be committed.                                                 |
 | Show file differences               | `git diff`                               | Shows file differences not yet staged.                                                           |
 | Show log                            | `git log`                                | Shows the commit logs.                                                                           |
+| Show log with details               | `git log --graph --oneline --decorate --all` | Show details of the commits                                                                  |
+
 
 These commands form the foundation of most interactions with Git and are essential for effective version control in software development projects. 
 Remember, each command can have additional options and parameters to customize its behavior,
