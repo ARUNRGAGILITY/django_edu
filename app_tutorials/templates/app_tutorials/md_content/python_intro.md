@@ -99,6 +99,69 @@ message in Python.
 print(message)
 ```
 
+Here is a simple summary of all the output, comments, basic data types, input 
+
+```python
+## Python Basics
+
+## Python Output Statement
+print("Hello from Python!")
+
+## Python Output Statement / Print Statement
+name = "John"
+last_name = "Smith"
+print("Welcome ", name, last_name)
+
+
+## Python Comments
+
+# This is a single line comment
+
+'''
+This is a multi-line comment
+Here we can enter some description of the program
+Here you enter some description
+'''
+
+
+## Python Basic Data Types
+int_var = 10
+float_var = 20.01
+boolean_var = True
+string_var = "String variable"
+complex_num_var = 5 + 2j
+
+print_string = f"""
+====================================
+int_var: {int_var}
+float_var: {float_var}
+boolean_var: {boolean_var}
+string_var: {string_var}
+complex_num_var: {complex_num_var}
+====================================
+"""
+
+print(f"Printing the Basic Data Types:  {print_string}")
+
+## Creating Variable Names with some meaning for recognition
+name = "John"
+age = 40
+bank_balance = 1000223.11
+city = "New York"
+occupation = "Engineer"
+work_history = ["Company ABC", "Company 123", "Company 456"]
+
+## Python Input statement
+get_name = input("Enter your Name: ")
+print(f"User's Name is: {get_name}")
+
+## Python identify the type of variable
+get_name = input("Enter your Name: ")
+type_of_var = type(get_name)
+print(f"User's Name is: {get_name} is of Type: {type_of_var}")
+```
+
+
 * Printing Lists and Iterables:
 ```
 fruits = ["apple", "banana", "cherry"]
