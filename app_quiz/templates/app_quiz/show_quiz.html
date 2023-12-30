@@ -16,7 +16,7 @@
                {% for q in questions %}                   
                     {% for key, value in q.items %}   
                             {% if key == "question" %}
-                                {{value.0}}:&nbsp;{{value.1|linebreaksbr }}
+                                {{value.0}}:&nbsp;{{value.1|safe|linebreaksbr }}
                             {% endif %}
                             <!-- {% if key != "options" and key != "correct_answer" and key != "mcq"  %} 
                             Question {{qno}}) &nbsp;{{ value }}   

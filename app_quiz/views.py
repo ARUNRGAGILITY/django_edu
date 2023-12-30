@@ -3,7 +3,7 @@ from collections import Counter
 import configparser
 import json
 import platform 
-
+import re
 app_name = "app_quiz"
 
 ### Utility function
@@ -59,6 +59,11 @@ def show_quiz(request, topic):
         # Extract the last numeric digit from the section name
         section_number = ''.join(filter(str.isdigit, section))
         question = config[section][f'question{section_number}']
+        ## ---- BEGIN THE QUESTION FORMATTING
+        question = re.sub("<code>", "<pre>", question, flags=re.MULTILINE)
+        question = re.sub("    ", "&nbsp;&nbsp;&nbsp;&nbsp;", question, flags=re.MULTILINE)
+        question = re.sub("</code>", "</pre>", question, flags=re.MULTILINE)
+        ## ---- END THE QUESTION FORMATTING
         options = config[section][f'options{section_number}'].split('; ')    
         correct_answer = config[section][f'correctAnswer{section_number}']  
         qno = section_number 
