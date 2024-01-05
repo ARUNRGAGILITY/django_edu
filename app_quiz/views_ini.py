@@ -72,7 +72,7 @@ def quiz_home_page(request):
     }
     template_file = f"{app_name}/quiz_home.html"
     return render(request, template_file, context)
-def parse_ini_file(file_path):
+def parse_ini_file1uu(file_path):
     questions = {}
     current_section = None
     current_key = None
@@ -86,7 +86,7 @@ def parse_ini_file(file_path):
                 questions[current_section] = {}
             elif '=' in line and not multiline:
                 current_key, value = line.split('=', 1)
-                current_key = current_key.strip().lower()
+                current_key = current_key.strip()
                 value = value.strip()
                 if value.startswith('"""'):
                     multiline = True
@@ -114,17 +114,19 @@ def show_quiz(request, topic):
     ini_file_path = f"{prod_path}{app_name}/templates/{app_name}/quiz_content/{topic}.ini"
 
     # Read the INI file and parse it
-    config = parse_ini_file(ini_file_path)
+    config = configparser.ConfigParser()
+    config.read(ini_file_path)
+    #config = parse_ini_file1uu(ini_file_path)
     # Convert the parsed data into a format suitable for the template
-    ####print(f">>> === config {config} === <<<")
+    print(f">>> === config {config} === <<<")
     questions = []
-    for item in config:
+    for section in config.sections():
         # Extract the last numeric digit from the section name
-        section_number = ''.join(filter(str.isdigit, item))
-        #print(f">>> === item {item} === <<<")
-        question = config[f'{item}']
-        options = question[f'options{section_number}'].split('; ')    
-        correct_answer = question[f'correctanswer{section_number}']  
+        section_number = ''.join(filter(str.isdigit, section))
+        question = config[section][f'question{section_number}']
+        code = config[section][code]
+        options = config[section][f'options{section_number}'].split('; ')    
+        correct_answer = config[section][f'correctAnswer{section_number}']  
         qno = section_number 
         
         mcq = "scq"  
@@ -133,6 +135,7 @@ def show_quiz(request, topic):
             #print(f">>> === {qno} {question} {mcq} === <<<")       
         question = {
             'question': [qno, question],
+            'code': code,
             'options': [qno, mcq, options],
             'correct_answer': correct_answer,
             'mcq': mcq,

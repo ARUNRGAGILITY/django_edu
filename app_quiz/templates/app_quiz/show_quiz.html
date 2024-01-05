@@ -1,6 +1,7 @@
 {% extends "../app_web/base_bootstrap.html" %}
 {% load static %}
 {% load custom_filters %}
+{% load app_web_my_filters %}
 {% block title %}{{quiz_name|capfirst}} Quiz{% endblock title %}
 {% block content %}
 <div class="container-fluid">
@@ -13,32 +14,48 @@
         <div class="col-md-10">
             <form action="" method="POST" id="quiz_form">{% csrf_token %}
             <div id="quiz-container">
-               {% for q in questions %}                   
-                    {% for key, value in q.items %}   
-                            {% if key == "question" %}
-                                {{value.0}}:&nbsp;{{value.1|safe|linebreaksbr }}
+
+                {% for q in questions %}                   
+                {% for key, value in q.items %}
+                    {% if key == "question" %}
+                        <!-- Process the 'question' key first -->
+                        {% for k1, v1 in value.1.items %}
+                            {% if k1|contains:"question" %}
+                                <!-- question -->
+                                {{ value.0 }}:&nbsp;{{ v1 }}
                             {% endif %}
-                            <!-- {% if key != "options" and key != "correct_answer" and key != "mcq"  %} 
-                            Question {{qno}}) &nbsp;{{ value }}   
-                            <br>             
-                            {% endif %} -->
-                            {% if key == "options" %}
-                               {% for option in value.2 %}
-                                    <input 
-                                    {% if value.1 == "mcq" %}type="checkbox"{% else %}
-                                    type="radio"{% endif %}
-                                    name="{{value.1}}_{{value.0}}"
-                                    value="{{value.1}}_{{value.0}}_{{forloop.counter}}">
-                                    &nbsp;
-                                    {{option}}
-                                    <br>
-                               {% endfor %}
-                            {% else %}                            
+                        {% endfor %}
+
+                        <!-- Now, process the 'code' key -->
+                        {% for k1, v1 in value.1.items %}
+                            {% if k1 == "code" %}
+                                <!-- code -->
+                                <pre>{{ v1 }}</pre>
+                            {% endif %}
+                        {% endfor %}
+                    {% endif %}
+
+                    {% if key == "options" %}
+                    {% for option in value.2 %}
+                         <input 
+                            {% if value.1 == "mcq" %}type="checkbox"{% else %}
+                            type="radio"{% endif %}
+                            name="{{value.1}}_{{value.0}}"
+                            value="{{value.1}}_{{value.0}}_{{forloop.counter}}">
+                            &nbsp;
+                            {{option}}
                             <br>
-                            {% endif %}
-                    {% endfor %}
-               {% endfor %}
-               <input type="submit" name="submit" id="submit" value="Check Answers">
+                        {% endfor %}
+                    {% else %}                            
+                    <br>
+                    {% endif %}
+
+                {% endfor %}
+            {% endfor %}
+            <input type="submit" name="submit" id="submit" value="Check Answers">
+
+
+
             </div>
             </form>           
         </div>
