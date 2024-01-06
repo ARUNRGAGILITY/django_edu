@@ -25,41 +25,6 @@ def check_two_list(got_list, ref_list):
         print("The answers do not match.")
     return match_result
 
-## ini file parsing
-def parse_ini_file(file_path):
-    questions = []
-    current_question = {}
-    current_key = None
-    multiline = False
-
-    with open(file_path, 'r') as file:
-        for line in file:
-            line = line.rstrip('\n')
-            if line.startswith('[') and line.endswith(']'):
-                if current_question:
-                    questions.append(current_question)
-                    current_question = {}
-                current_question['section'] = line.strip('[]')
-            elif '=' in line and not multiline:
-                current_key, value = line.split('=', 1)
-                current_key = current_key.strip()
-                value = value.strip()
-                if value.startswith('"""'):
-                    multiline = True
-                    current_question[current_key] = value[3:] + '\n'
-                else:
-                    current_question[current_key] = value
-            elif multiline:
-                if line.endswith('"""'):
-                    current_question[current_key] += line[:-3]
-                    multiline = False
-                else:
-                    current_question[current_key] += line + '\n'
-        if current_question:
-            questions.append(current_question)
-
-    return questions
-
 
 def quiz_home_page(request):
     # take inputs
@@ -106,7 +71,7 @@ def show_quiz(request, topic):
     # Define the path to the INI file based on the requested topic
     #f"app_tutorials/templates/app_tutorials/md_content/{topic}.md"
     os_info = platform.system()
-    print(f">>> === OS INFO: {os_info} === <<<")
+    #print(f">>> === OS INFO: {os_info} === <<<")
     prod_path = ""
     if os_info.find("Linux") != -1:
         prod_path = f"/home/DEVAGILEAGILITY/com_learnpythondjango/lpdcom/django_edu/"
