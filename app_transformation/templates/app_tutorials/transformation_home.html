@@ -1,0 +1,63 @@
+{% extends "../app_web/base_bootstrap.html" %}
+{% load static %}
+{% block title %}Transformation Home{% endblock title %}
+{% block content %}
+{% include "../app_web/top_level_menu.html" %}
+<div class="container-fluid">    
+    <h1>Tutorials Home</h1>
+    <!-- tabular column / matrix design -->
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table table-bordered">
+               <thead>
+                    <tr>
+                        <th>Topic/Progress</th>
+                        <th>Introduction</th>
+                        <th>Foundations</th>
+                        <th>Examples</th>
+                        <th>Projects</th>
+                    </tr>
+               </thead>
+               <tbody>
+                    <tr>
+                        <td>
+                            <b>Enterprise Transformation</b>
+                        </td>
+                        <td>
+                            <a href="{% url 'display_md_topic' 'python_intro' %}">Introduction</a>
+                        </td>
+                        <td>
+                            <a href="{% url 'display_md_topic' 'python_foundations' %}">Foundations</a>
+                        </td>
+                        <td>
+                           
+                        </td>
+                        <td>
+                            <a href="{% url 'display_md_topic' 'python_projects' %}">Transformation Projects</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <b>Organization Transformation</b>
+                        </td>
+                        <td>
+                            <a href="{% url 'display_md_topic' 'django_intro' %}">Introduction</a>
+                        </td>
+                        <td>
+                            <a href="{% url 'django_course1'  %}">oundation Course </a>
+                        </td>
+                        <td>
+                            <a href="{% url 'display_md_topic' 'django_simple_app' %}">Sample Transformation</a>
+                        </td>
+                        <td>                             
+                            <a href="{% url 'display_md_topic' 'django_blog' %}">Case Study: Financial Organziation</a><br><br>
+                            <a href="{% url 'display_md_topic' 'django_website_sample' %}">Case Study: Product Company</a>
+                        </td>
+                    </tr>
+                   
+               </tbody>
+            </table>
+        </div>
+    </div>   
+</div>
+{% endblock content %}

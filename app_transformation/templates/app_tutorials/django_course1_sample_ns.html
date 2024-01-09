@@ -1,0 +1,71 @@
+{% extends "../app_web/base_bootstrap.html" %}
+{% load static %}
+{% block title %}Django Course Home{% endblock title %}
+{% block content %}
+{% include "../app_web/top_level_menu.html" %}
+<div class="container-fluid">    
+    <h1>Django Course Home</h1>
+    <div class="row">
+        <div class="col-md-2 sticky-toc">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Table of Contents</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>
+                            <a href="#" class="load-content" data-url="{% url 'display_md_sub_topic' 'django_intro' %}">Django Introduction</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>
+                            <a href="#" class="load-content" data-url="{% url 'display_md_sub_topic' 'django_intro' %}">Django Setup</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-9">
+            <div class="display_content">
+                <!-- Your content here -->
+            </div>
+        </div>
+        
+    </div>  
+</div>
+<!-- Javascript-->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function() {
+        // Handle the click event for the table of contents links
+        $(".load-content").click(function(e) {
+            e.preventDefault();
+            // Get the URL from the data-url attribute of the clicked link
+            var url = $(this).data("url");
+            
+            // Update the display_content div with a loading message (optional)
+            $(".display_content").html("Loading...");
+            
+            // Use AJAX to fetch the content from the provided URL
+            $.ajax({
+                url: url,
+                type: 'GET',
+                success: function(data) {
+                    // Replace the content in the display_content div with the fetched data
+                    $(".display_content").html(data);
+                },
+                error: function() {
+                    alert("Error loading content");
+                }
+            });
+        });
+    });
+</script>
+
+{% endblock content %}
+

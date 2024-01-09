@@ -28,6 +28,7 @@ INSTALLED_APPS = [
     'app_tutorials',
     'app_quiz',
     'app_demo',
+    'app_transforamtion',
 ]
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

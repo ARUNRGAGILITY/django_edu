@@ -18,6 +18,13 @@
                 </li>
                 <li class="nav-item {% if page == 'tutorials' %}active{% endif %}">                    
                     {% if page == 'tutorials' %}
+                    <b class="nav-link bold">Transformation</b>
+                    {% else %}
+                    <a href="{% url 'tutorials_home_page' %}" class="nav-link">Transformation</a>
+                    {% endif %}
+                </li>
+                <li class="nav-item {% if page == 'tutorials' %}active{% endif %}">                    
+                    {% if page == 'tutorials' %}
                     <b class="nav-link bold">Tutorials</b>
                     {% else %}
                     <a href="{% url 'tutorials_home_page' %}" class="nav-link">Tutorials</a>

@@ -1,0 +1,12 @@
+{% extends "../app_web/sub_topic_bootstrap.html" %}
+{% load static %}
+{% load custom_filters %}
+{% load markdown_extras  %}
+{% block title %}{{topic}} Tutorials{% endblock title %}
+{% block content %}
+{% include "./_style_markdown_content.css" %}
+<div class="markdown-content">
+    {{html_content|markdown|safe}}
+</div>  
+{% include "./_js_markdown_content.js" %}
+{% endblock content %}

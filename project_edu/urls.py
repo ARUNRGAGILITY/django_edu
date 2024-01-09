@@ -16,6 +16,8 @@ urlpatterns = [
     path('blog/', include('app_blog.urls')),
     # Tutorials
     path('tutorials/', include('app_tutorials.urls')),
+    # Transformation
+    path('transformation/', include('app_transformation.urls')),
     # Quiz
     path('quiz/', include('app_quiz.urls')),
     # Demo
