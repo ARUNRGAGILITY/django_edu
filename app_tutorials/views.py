@@ -4,6 +4,7 @@ import os
 import platform
 
 app_name = "app_tutorials"
+gprod_path = f"/home/DEVAGILEAGILITY/com_learnpythondjango/lpdcom/django_edu/"
 def tutorials_home_page(request):
     #
     
@@ -34,7 +35,7 @@ def test_markdown(request):
     print(f">>> === OS INFO: {os_info} === <<<")
     prod_path = ""
     if os_info.find("Linux") != -1:
-        prod_path = f"/home/DEVAGILEAGILITY/com_learnpythondjango/lpdcom/django_edu/"
+        prod_path = f"{gprod_path}"
     # File path to the Markdown file in the template directory
     markdown_file_path = f"{prod_path}{app_name}/templates/{app_name}/md_content/test_md.md"
     # Read the content of the Markdown file
@@ -53,7 +54,7 @@ def display_md_topic(request, topic, sub_topic=False):
     print(f">>> === OS INFO: {os_info} === <<<")
     prod_path = ""
     if os_info.find("Linux") != -1:
-        prod_path = f"/home/DEVAGILEAGILITY/com_learnpythondjango/lpdcom/django_edu/"
+        prod_path = f"{gprod_path}"
     # File path to the Markdown file in the template directory
     markdown_file_path = f"{prod_path}{app_name}/templates/{app_name}/md_content/{topic}.md"
     # Print the file path for debugging
@@ -73,7 +74,7 @@ def display_md_sub_topic(request, folder, topic):
     os_info = platform.system()
     prod_path = ""
     if os_info.find("Linux") != -1:
-        prod_path = f"/home/DEVAGILEAGILITY/com_learnpythondjango/lpdcom/django_edu/"
+        prod_path = f"{gprod_path}"
     # File path to the Markdown file in the template directory
     markdown_file_path = f"{prod_path}{app_name}/templates/{app_name}/md_content/{folder}/{topic}.md"
     # Print the file path for debugging

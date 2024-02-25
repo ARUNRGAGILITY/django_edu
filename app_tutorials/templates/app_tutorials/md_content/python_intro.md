@@ -62,13 +62,44 @@ In Python, you can use the `print()` function to display output to the console. 
 
 * Printing Text:
 ```python
+a = 20
+b = 30
+name = "Bob"
+age = 25
+message = "Hello World!"
+my_message = """
+This is a multiline
+message that you can 
+store in a simple variable
+and print later
+"""
+
+# print with ', ", """ quotes
+print('Hello World!')
 print("Hello, World!")  # Prints the string "Hello, World!"
+print("""Hello World!""")
+
+# print with f string
+print(f"{message}")
+print("message is ", message) # here print statement with multiple values separated by ','
+
+# print values with comma without concatenation
+print(f"Multiply two numbers a {a}, b {b} ", a*b) # here the print statement with expression
+# print a multine string
+print(f"Multiline message {my_message} ")
+
+# print by str.format() function 
+print(f"Name: {name}, Age: {age}")  # Using f-strings
+print("Name: {}, Age: {}".format(name, age))  # Using str.format()
 ```
 
 * Printing Variables:
 ```python
 name = "Alice"
 age = 30
+bank_balance = 50001111.24
+location = 3 + 5j
+is_employee = True
 print("Name:", name, "Age:", age)  # Prints variable values along with text
 ```
 
@@ -80,14 +111,7 @@ sum_result = x + y
 print("Sum:", sum_result)  # Prints the result of an expression
 ```
 
-* Formatting Output:
-   You can format the output using f-strings or the `str.format()` method.
-```python
-name = "Bob"
-age = 25
-print(f"Name: {name}, Age: {age}")  # Using f-strings
-print("Name: {}, Age: {}".format(name, age))  # Using str.format()
-```
+
 
 * Printing Multiple Lines:
    You can use triple-quoted strings for multi-line output.
