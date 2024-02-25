@@ -165,7 +165,7 @@ def show_quiz(request, topic):
                 result = check_two_list(got_answer, ref_answer)
                 if result == True:
                     user_results[skey] = 1            
-                print(f">>> === [[CHECKING]] ref_answer {ref_answer} == {got_answer} ..{result}.. got_answer === <<<")
+                #print(f">>> === [[CHECKING]] ref_answer {ref_answer} == {got_answer} ..{result}.. got_answer === <<<")
         
             score += user_results[skey]
             total = len(questions)
