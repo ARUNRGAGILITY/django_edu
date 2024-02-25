@@ -9,6 +9,10 @@ urlpatterns = [
     # Django Foundation course1
     path('django_course1', views.django_course1, name="django_course1"),
     
+    # Feb252024
+    # display_md_topic_home
+    path('display_md_topic_home/<str:topic>', views.display_md_topic_home, name="display_md_topic_home"),
+    
     # display_md_topic
     path('display_md_topic/<str:topic>', views.display_md_topic, name="display_md_topic"),
     # display_md_sub_topic
