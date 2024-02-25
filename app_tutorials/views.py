@@ -57,7 +57,7 @@ def test_markdown(request):
 
 # 25.02.2024
 # adding a topic landing or home page
-def display_md_topic_home(request, topic):
+def display_md_topic_home(request, topic, sub_topic=False):
     os_info = g_os_info
     prod_path = ""
     if os_info.find("Linux") != -1:
@@ -67,7 +67,8 @@ def display_md_topic_home(request, topic):
     markdown_content = helper_md_file_full_str(markdown_file_path)
     context = {'html_content': markdown_content,
                'page': 'tutorials',
-               'topic': topic,}
+               'topic': topic,
+               'sub_topic': sub_topic}
     template_file = f"{app_name}/display_md_topic_home.html"
     return render(request, template_file, context)
 
